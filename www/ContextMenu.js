@@ -1,8 +1,8 @@
-function CameraPermission() {}
+var CameraPermission = function() {};
 
 CameraPermission.prototype.init = function(onSuccess, onError) {
-    exec(onSuccess, onError, "CameraPermission", "init");
-}
+    cordova.exec(onSuccess, onError, "CameraPermission", "init");
+};
 
 cordova.addConstructor(function() {
     if(!window.Cordova) {
