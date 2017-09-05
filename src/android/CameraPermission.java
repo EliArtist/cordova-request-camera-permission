@@ -9,13 +9,17 @@ import org.json.JSONObject;
 
 public class CameraPermission extends CordovaPlugin {
 
+    private static final String [] permissions = {
+        Manifest.permission.CAMERA
+    };
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("init")) {
-            if(cordova.hasPermissions(Manifest.permission.CAMERA)) {
+            if(cordova.hasPermissions(permissions[0])) {
                 return true;
             } else {
-                cordova.requestPermissions(this, 0, [Manifest.permission.CAMERA]);
+                cordova.requestPermissions(this, 0, permissions);
             }
 
             if(cordova.hasPermissions(Manifest.permission.CAMERA)) {
