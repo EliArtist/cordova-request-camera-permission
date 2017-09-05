@@ -19,16 +19,18 @@ public class CameraPermission extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("init")) {
-            if(cordova.hasPermissions(permissions[0])) {
-                return true;
-            } else {
-                cordova.requestPermissions(this, 0, permissions);
-            }
+            if(cordova.hasPermission) {
+                if(cordova.hasPermissions(permissions[0])) {
+                    return true;
+                } else {
+                    cordova.requestPermissions(this, 0, permissions);
+                }
 
-            if(cordova.hasPermissions(permissions[0])) {
-                return true;
-            } else {
-                return false;
+                if(cordova.hasPermissions(permissions[0])) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
         }
         return false;
