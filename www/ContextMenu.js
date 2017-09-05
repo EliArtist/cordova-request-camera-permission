@@ -1,9 +1,7 @@
-function ContextMenu() {
-    this._test_ = "Hallo Welt!";
+function CameraPermission() {}
+
+CameraPermission.prototype.init = function(onSuccess, onError) {
+    exec(onSuccess, onError, "CameraPermission", "init");
 }
 
-ContextMenu.prototype.getTest = function() {
-    return this._test_;
-}
-
-module.exports = ContextMenu;
+module.exports = CameraPermission;

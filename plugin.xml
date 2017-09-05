@@ -6,7 +6,18 @@
     <name>CameraPermissionRequest</name>
     <description>Request Camera Permissions on Android</description>
     <platform name="android">
+        <source-file src="src/android/CameraPermission.java" target-dir="src/de/requestcamerapermission"/>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CameraPermission">
+                <param name="android-package" value="de.requestcamerapermission.CameraPermission" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
         <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-feature android:name="android.hardware.camera" android:required="true" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
             <uses-permission android:name="android.permission.CAMERA" />
         </config-file>
     </platform>
