@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-request-camera-permission"
         version="0.0.1-dev">
-    <name>Contextmenu</name>
+    <name>CameraPermissionRequest</name>
     <description>Request Camera Permissions on Android</description>
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/*">

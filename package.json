@@ -1,9 +1,9 @@
 {
-  "name": "cordova-contextmenu",
+  "name": "cordova-request-camera-permission",
   "version": "0.0.1-dev",
-  "description": "Context Menu Disable for Android",
+  "description": "Request Camera Permission for Android",
   "cordova": {
-    "id": "cordova-contextmenu",
+    "id": "cordova-request-camera-permission",
     "platforms": [
       "android"
     ]
