@@ -5,6 +5,11 @@
         version="0.0.1-dev">
     <name>CameraPermissionRequest</name>
     <description>Request Camera Permissions on Android</description>
+
+    <js-module src="www/CameraPermission.js" name="CameraPermission">
+        <clobbers target="CameraPermission" />
+    </js-module>
+
     <platform name="android">
         <source-file src="src/android/CameraPermission.java" target-dir="src/de/requestcamerapermission"/>
 
